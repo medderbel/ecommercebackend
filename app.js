@@ -22,9 +22,10 @@ process.exit();
 app.get("/",(req,res)=>{
 res.send("Bonjour");
 });
-app.listen(process.env.PORT, () => {
-console.log(`Server is listening on port ${process.env.PORT}`); });
 app.use('/api/categories', categorieRouter);
 app.use('/api/scategories', scategorieRouter);
 app.use('/api/articles', articleRouter);
+app.listen(process.env.PORT, () => {
+console.log(`Server is listening on port ${process.env.PORT}`); });
+
 module.exports = app;
